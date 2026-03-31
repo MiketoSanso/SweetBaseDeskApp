@@ -1,5 +1,6 @@
 from typing import List
 
+from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
 from src.features.products.domain.entities.Product import Product
 from src.features.products.infrastructure.models.ProductORM import ProductORM
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository

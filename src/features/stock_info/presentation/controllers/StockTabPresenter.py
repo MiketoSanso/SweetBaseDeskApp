@@ -37,7 +37,7 @@ class StockTabPresenter:
     def on_open_stock_dialog_requested(self):
         dialog = StockDialog()
 
-        presenter = StockDialogPresenter(
+        self._dialog_presenter = StockDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_branches_usecase=self.get_branches_usecase,

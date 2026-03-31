@@ -1,3 +1,5 @@
+from typing import List
+
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
@@ -9,6 +11,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
+from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
 from src.features.products.application.interfaces.ICatalogTab import ICatalogTab
 from src.shared.application.Interfaces.IABCWidget import IABCWidget
 
@@ -59,7 +62,7 @@ class CatalogTab(ICatalogTab, IABCWidget):
         self.catalog_list.itemDoubleClicked.connect(_on_product_selected)
 
     # Методы для внешнего управления UI
-    def display_products(self, products, has_products):
+    def display_products(self, products: List[ProductDisplayDTO], has_products):
         """Отображает список продуктов"""
         self.catalog_list.clear()
 
@@ -71,8 +74,8 @@ class CatalogTab(ICatalogTab, IABCWidget):
 
         for product in products:
             item_text = (
-                f"{product['name']} | Всего на складах: {product['stock_count']} шт."
+                f"{product.name} | Всего на складах: {product.stock_count} шт."
             )
             item = QListWidgetItem(item_text)
-            item.setData(Qt.UserRole, product["id"])
+            item.setData(Qt.UserRole, product.id)
             self.catalog_list.addItem(item)

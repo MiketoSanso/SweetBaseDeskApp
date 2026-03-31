@@ -45,7 +45,7 @@ class AddOrEditIngredientDialogPresenter:
             else:
                 logger = logging.getLogger(__name__)
                 logger.exception(
-                    f"Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
+                    "Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
                 )
                 return
 
@@ -66,7 +66,7 @@ class AddOrEditIngredientDialogPresenter:
         else:
             logger = logging.getLogger(__name__)
             logger.exception(
-                f"Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
+                "Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
             )
             return
 

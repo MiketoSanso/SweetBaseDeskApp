@@ -81,7 +81,7 @@ class ProductsTabPresenter:
 
         product = self.get_product_by_id_usecase.execute(id)
 
-        presenter = ProductDetailsDialogPresenter(
+        self._dialog_presenter = ProductDetailsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_ingredient_by_id_usecase=self.get_ingredient_by_id_usecase,

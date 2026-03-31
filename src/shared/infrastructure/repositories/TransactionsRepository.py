@@ -34,12 +34,12 @@ class TransactionsRepository(ITransactionsRepository):
     def get_transactions_info(self, session=None) -> TransactionsInfoDTO:
         in_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival == True)
+            .filter(TransactionORM.is_arrival is True)
             .count()
         )
         out_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival == False)
+            .filter(TransactionORM.is_arrival is False)
             .count()
         )
 

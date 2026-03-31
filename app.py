@@ -1,12 +1,9 @@
-import sys
-
-from src.shared.infrastructure.LoggerController import LoggerController
-
 import os
 
 from Dependencies import Dependencies
 from pathlib import Path
 
+from src.shared.infrastructure.LoggerController import LoggerController
 from src.shared.presentation.Window import Window
 
 os.environ['PROJECT_ROOT'] = str(Path(__file__).parent)

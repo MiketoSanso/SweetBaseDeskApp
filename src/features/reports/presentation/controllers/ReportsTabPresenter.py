@@ -45,7 +45,7 @@ class ReportsTabPresenter:
     def on_open_reports_requested(self):
         dialog = ReportsDialog()
 
-        presenter = ReportsDialogPresenter(
+        self._dialog_presenter = ReportsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_transactions_by_filters_usecase=self.get_transactions_by_filters_usecase,

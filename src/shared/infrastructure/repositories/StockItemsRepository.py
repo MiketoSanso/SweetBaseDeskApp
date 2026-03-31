@@ -26,6 +26,17 @@ class StockItemsRepository(IStockItemsRepository):
         return count
 
     @repo_func
+    def get_all_count_stocks(self, id_stock_items: tuple[int], session=None) -> tuple[int]:
+        count_stock_items: List[int] = []
+
+        for product in products:
+            count_stock = self.db_stock_items.get_count_product_in_stocks(
+                product.local_id
+            )
+
+        return tuple(count_stock_items)
+
+    @repo_func
     def get_item_in_stock(
         self, branch_id: int, stock_id: int, product_id: int, session=None
     ) -> StockItem | None:

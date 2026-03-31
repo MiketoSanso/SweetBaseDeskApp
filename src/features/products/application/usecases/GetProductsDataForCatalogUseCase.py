@@ -1,3 +1,7 @@
+from typing import List
+
+from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
+from src.features.products.domain.entities.Product import Product
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
 from src.shared.application.Interfaces.IStockItemsRepository import (
@@ -15,27 +19,19 @@ class GetProductsDataForCatalogUseCase:
 
     @usecase_func
     def execute(self) -> ProcessDTO:
-        products = self.db_products.get_products()
+        products: List[Product] = self.db_products.get_products()
 
-        if products == {}:
+        if not products:
             return ProcessDTO(
                 status=False,
                 message="Продукты не найдены!",
                 error="Products are not found!",
             )
 
-        data = []
-        for product in products:
-            count_stock = self.db_stock_items.get_count_product_in_stocks(
-                product.local_id
-            )
+        product_ids = [product.local_id for product in products]
 
-            data.append(
-                {
-                    "id": product.local_id,
-                    "name": product.name,
-                    "stock_count": count_stock,
-                }
-            )
+        stock_item_counts: tuple[int] = self.db_stock_items.get_all_count_stocks(tuple(product_ids))
 
-        return ProcessDTO(status=True, message="Данные получены успешно!", data=data)
+
+
+        return ProcessDTO(status=True, message="Данные получены успешно!", data=products)

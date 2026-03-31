@@ -36,14 +36,14 @@ class BranchTabPresenter:
     def on_add_branch_requested(self):
         dialog = AddBranchDialog()
 
-        presenter = AddBranchDialogPresenter(
+        self._dialog_presenter = AddBranchDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             add_branch_usecase=self.add_branch_usecase,
         )
 
-        presenter.set_on_success_callback(self._display_branches)
-        presenter.set_on_success_callback(self._on_branches_updated)
+        self._dialog_presenter.set_on_success_callback(self._display_branches)
+        self._dialog_presenter.set_on_success_callback(self._on_branches_updated)
 
         dialog.exec()
 

@@ -16,3 +16,6 @@ class LoggerController:
                 logging.StreamHandler(sys.stdout),
             ],
         )
+
+        logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
+

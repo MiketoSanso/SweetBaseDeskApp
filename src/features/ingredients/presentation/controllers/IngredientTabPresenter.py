@@ -51,7 +51,7 @@ class IngredientTabPresenter:
     def on_manage_ingredients_requested(self):
         dialog = ManageIngredientsDialog()
 
-        presenter = ManageIngredientsDialogPresenter(
+        self._dialog_presenter = ManageIngredientsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             add_ingredient_usecase=self.add_ingredient_usecase,

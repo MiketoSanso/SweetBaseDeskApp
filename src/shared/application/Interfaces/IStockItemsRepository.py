@@ -14,6 +14,10 @@ class IStockItemsRepository(ABC):
         pass
 
     @abstractmethod
+    def get_all_count_stocks(self, id_stock_items: tuple[int], session=None) -> tuple[int]:
+        pass
+
+    @abstractmethod
     def get_item_in_stock(
         self, branch_id: int, stock_id: int, product_id: int
     ) -> StockItem | None:

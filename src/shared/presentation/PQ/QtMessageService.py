@@ -1,17 +1,19 @@
+from typing import Optional
+
 from PySide6.QtWidgets import QMessageBox, QWidget
 
 from src.shared.application.Interfaces.IMessageService import IMessageService
 
 
 class QtMessageService(IMessageService):
-    def show_success(self, title: str, message: str, parent_widget: QWidget = None):
+    def show_success(self, title: str, message: str, parent_widget: Optional[QWidget] = None):
         QMessageBox.information(parent_widget, title, message)
 
-    def show_error(self, title: str, message: str, parent_widget: QWidget = None):
+    def show_error(self, title: str, message: str, parent_widget: Optional[QWidget] = None):
         QMessageBox.critical(parent_widget, title, message)
 
     def show_question(
-        self, title: str, message: str, parent_widget: QWidget = None
+        self, title: str, message: str, parent_widget: Optional[QWidget] = None
     ) -> bool:
         result = QMessageBox.question(parent_widget, title, message)
         return result == QMessageBox.Yes

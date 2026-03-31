@@ -1,12 +1,12 @@
 ================================================================================
-Сборка Python-файлов из: G:\Мой диск\SweetsBase
+Сборка Python-файлов из: D:\Repositories\Python\SweetBase\SweetBaseDeskApp
 Всего найдено файлов: 111
-Дата создания: 2026-03-28 13:35:03.060804
+Дата создания: 2026-03-31 17:21:52.396530
 ================================================================================
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 1/111: app.py
-Полный путь: G:\Мой диск\SweetsBase\app.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\app.py
 ────────────────────────────────────────────────────────────────────────────────
 import sys
 
@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 2/111: Dependencies.py
-Полный путь: G:\Мой диск\SweetsBase\Dependencies.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\Dependencies.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.usecases.AddBranchUseCase import AddBranchUseCase
 from src.features.branches.application.usecases.GetBranchesUseCase import GetBranchesUseCase
@@ -208,7 +208,7 @@ class Dependencies:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 3/111: Project-Reader.py
-Полный путь: G:\Мой диск\SweetsBase\Project-Reader.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\Project-Reader.py
 ────────────────────────────────────────────────────────────────────────────────
 import os
 import sys
@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 4/111: src\features\_main_window\application\interfaces\IMainWindow.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\_main_window\application\interfaces\IMainWindow.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\_main_window\application\interfaces\IMainWindow.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 
@@ -371,7 +371,7 @@ class IMainWindow(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 5/111: src\features\_main_window\presentation\PQ\tabs\MainWindow.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\_main_window\presentation\PQ\tabs\MainWindow.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\_main_window\presentation\PQ\tabs\MainWindow.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtWidgets import QTabWidget
 
@@ -446,7 +446,7 @@ class MainWindow(IMainWindow, IABCMainWindow):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 6/111: src\features\branches\application\dtos\BranchCreateDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\application\dtos\BranchCreateDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\application\dtos\BranchCreateDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -464,7 +464,7 @@ class BranchCreateDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 7/111: src\features\branches\application\interfaces\IAddBranchDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\application\interfaces\IAddBranchDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\application\interfaces\IAddBranchDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -486,7 +486,7 @@ class IAddBranchDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 8/111: src\features\branches\application\interfaces\IBranchesTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\application\interfaces\IBranchesTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\application\interfaces\IBranchesTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -512,7 +512,7 @@ class IBranchesTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 9/111: src\features\branches\application\usecases\AddBranchUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\application\usecases\AddBranchUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\application\usecases\AddBranchUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.dtos.BranchCreateDTO import BranchCreateDTO
 from src.features.branches.domain.entities.Branch import Branch
@@ -547,7 +547,7 @@ class AddBranchUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 10/111: src\features\branches\application\usecases\GetBranchesUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\application\usecases\GetBranchesUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\application\usecases\GetBranchesUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
@@ -576,7 +576,7 @@ class GetBranchesUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 11/111: src\features\branches\domain\entities\Branch.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\domain\entities\Branch.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\domain\entities\Branch.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -599,7 +599,7 @@ class Branch(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 12/111: src\features\branches\infrastructure\models\BranchORM.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\infrastructure\models\BranchORM.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\infrastructure\models\BranchORM.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy import JSON, Column, Integer, String
 
@@ -623,7 +623,7 @@ class BranchORM(Base):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 13/111: src\features\branches\presentation\controllers\AddBranchDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\presentation\controllers\AddBranchDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\presentation\controllers\AddBranchDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Callable
 
@@ -676,7 +676,7 @@ class AddBranchDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 14/111: src\features\branches\presentation\controllers\BranchTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\presentation\controllers\BranchTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\presentation\controllers\BranchTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Callable, List
 
@@ -716,14 +716,14 @@ class BranchTabPresenter:
     def on_add_branch_requested(self):
         dialog = AddBranchDialog()
 
-        presenter = AddBranchDialogPresenter(
+        self._dialog_presenter = AddBranchDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             add_branch_usecase=self.add_branch_usecase,
         )
 
-        presenter.set_on_success_callback(self._display_branches)
-        presenter.set_on_success_callback(self._on_branches_updated)
+        self._dialog_presenter.set_on_success_callback(self._display_branches)
+        self._dialog_presenter.set_on_success_callback(self._on_branches_updated)
 
         dialog.exec()
 
@@ -748,7 +748,7 @@ class BranchTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 15/111: src\features\branches\presentation\PQ\dialogs\AddBranchDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\presentation\PQ\dialogs\AddBranchDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\presentation\PQ\dialogs\AddBranchDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtWidgets import (
     QFormLayout,
@@ -826,7 +826,7 @@ class AddBranchDialog(IAddBranchDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 16/111: src\features\branches\presentation\PQ\tabs\BranchesTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\branches\presentation\PQ\tabs\BranchesTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\branches\presentation\PQ\tabs\BranchesTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -909,7 +909,7 @@ class BranchesTab(IBranchesTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 17/111: src\features\ingredients\application\dtos\IngredientCreateDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\dtos\IngredientCreateDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\dtos\IngredientCreateDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -927,7 +927,7 @@ class IngredientCreateDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 18/111: src\features\ingredients\application\interfaces\IAddIngredientDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\interfaces\IAddIngredientDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\interfaces\IAddIngredientDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -959,7 +959,7 @@ class IAddIngredientDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 19/111: src\features\ingredients\application\interfaces\IIngredientsTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\interfaces\IIngredientsTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\interfaces\IIngredientsTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -981,7 +981,7 @@ class IIngredientsTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 20/111: src\features\ingredients\application\interfaces\IManageIngredientsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\interfaces\IManageIngredientsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\interfaces\IManageIngredientsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -1028,7 +1028,7 @@ class IManageIngredientsDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 21/111: src\features\ingredients\application\usecases\AddIngredientUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\usecases\AddIngredientUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\usecases\AddIngredientUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.ingredients.application.dtos.IngredientCreateDTO import (
     IngredientCreateDTO,
@@ -1081,7 +1081,7 @@ class AddIngredientUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 22/111: src\features\ingredients\application\usecases\DeleteIngredientUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\usecases\DeleteIngredientUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\usecases\DeleteIngredientUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 import logging
 
@@ -1113,7 +1113,7 @@ class DeleteIngredientUseCase:
             return ProcessDTO(status=True, message="Ингредиент удалён!")
         except Exception as e:
             logger = logging.getLogger(__name__)
-            logger.exception(f"Exception in GetIngredientsUseCase")
+            logger.exception("Exception in GetIngredientsUseCase")
             return ProcessDTO(
                 status=False,
                 message="Ошибка при загрузке ингредиентов!",
@@ -1127,7 +1127,7 @@ class DeleteIngredientUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 23/111: src\features\ingredients\application\usecases\EditIngredientUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\usecases\EditIngredientUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\usecases\EditIngredientUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.ingredients.application.dtos.IngredientCreateDTO import (
     IngredientCreateDTO,
@@ -1187,7 +1187,7 @@ class EditIngredientUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 24/111: src\features\ingredients\application\usecases\GetIngredientByIdUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\usecases\GetIngredientByIdUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\usecases\GetIngredientByIdUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
@@ -1222,7 +1222,7 @@ class GetIngredientByIDUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 25/111: src\features\ingredients\application\usecases\GetIngredientsUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\application\usecases\GetIngredientsUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\application\usecases\GetIngredientsUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
@@ -1257,7 +1257,7 @@ class GetIngredientsUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 26/111: src\features\ingredients\domain\entities\Ingredient.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\domain\entities\Ingredient.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\domain\entities\Ingredient.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -1281,7 +1281,7 @@ class Ingredient(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 27/111: src\features\ingredients\infrastructure\models\IngredientORM.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\infrastructure\models\IngredientORM.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\infrastructure\models\IngredientORM.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy import Column, Float, Integer, String
 
@@ -1308,7 +1308,7 @@ class IngredientORM(Base):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 28/111: src\features\ingredients\presentation\controllers\AddOrEditIngredientDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\controllers\AddOrEditIngredientDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\controllers\AddOrEditIngredientDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 import logging
 from typing import Callable
@@ -1357,7 +1357,7 @@ class AddOrEditIngredientDialogPresenter:
             else:
                 logger = logging.getLogger(__name__)
                 logger.exception(
-                    f"Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
+                    "Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
                 )
                 return
 
@@ -1378,7 +1378,7 @@ class AddOrEditIngredientDialogPresenter:
         else:
             logger = logging.getLogger(__name__)
             logger.exception(
-                f"Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
+                "Exception in AddOrEditIngredientDialogPresenter: self.id_editing_ingredient is None!"
             )
             return
 
@@ -1401,7 +1401,7 @@ class AddOrEditIngredientDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 29/111: src\features\ingredients\presentation\controllers\IngredientTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\controllers\IngredientTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\controllers\IngredientTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.ingredients.application.interfaces.IIngredientsTab import (
     IIngredientsTab,
@@ -1456,7 +1456,7 @@ class IngredientTabPresenter:
     def on_manage_ingredients_requested(self):
         dialog = ManageIngredientsDialog()
 
-        presenter = ManageIngredientsDialogPresenter(
+        self._dialog_presenter = ManageIngredientsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             add_ingredient_usecase=self.add_ingredient_usecase,
@@ -1479,7 +1479,7 @@ class IngredientTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 30/111: src\features\ingredients\presentation\controllers\ManageIngredientsDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\controllers\ManageIngredientsDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\controllers\ManageIngredientsDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Callable
 
@@ -1605,7 +1605,7 @@ class ManageIngredientsDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 31/111: src\features\ingredients\presentation\PQ\dialogs\AddOrEditIngredientDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\PQ\dialogs\AddOrEditIngredientDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\PQ\dialogs\AddOrEditIngredientDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtWidgets import (
     QDoubleSpinBox,
@@ -1713,7 +1713,7 @@ class AddOrEditIngredientDialog(IAddIngredientDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 32/111: src\features\ingredients\presentation\PQ\dialogs\ManageIngredientsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\PQ\dialogs\ManageIngredientsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\PQ\dialogs\ManageIngredientsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -1872,7 +1872,7 @@ class ManageIngredientsDialog(IManageIngredientsDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 33/111: src\features\ingredients\presentation\PQ\tabs\IngredientsTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\ingredients\presentation\PQ\tabs\IngredientsTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\ingredients\presentation\PQ\tabs\IngredientsTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QLabel, QPushButton, QVBoxLayout
@@ -1932,7 +1932,7 @@ class IngredientsTab(IIngredientsTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 34/111: src\features\products\application\dtos\IngredientDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\dtos\IngredientDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\dtos\IngredientDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -1950,7 +1950,7 @@ class IngredientDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 35/111: src\features\products\application\dtos\ProductCreateDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\dtos\ProductCreateDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\dtos\ProductCreateDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -1972,7 +1972,7 @@ class ProductCreateDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 36/111: src\features\products\application\dtos\ProductIngredientDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\dtos\ProductIngredientDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\dtos\ProductIngredientDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -1991,7 +1991,7 @@ class ProductIngredientDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 37/111: src\features\products\application\dtos\StockItemDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\dtos\StockItemDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\dtos\StockItemDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -2008,7 +2008,7 @@ class StockItemDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 38/111: src\features\products\application\interfaces\IAddProductDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\interfaces\IAddProductDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\interfaces\IAddProductDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -2048,7 +2048,7 @@ class IAddProductDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 39/111: src\features\products\application\interfaces\ICatalogTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\interfaces\ICatalogTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\interfaces\ICatalogTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -2078,7 +2078,7 @@ class ICatalogTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 40/111: src\features\products\application\interfaces\IProductDetailsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\interfaces\IProductDetailsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\interfaces\IProductDetailsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 
@@ -2107,7 +2107,7 @@ class IProductDetailsDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 41/111: src\features\products\application\usecases\AddProductUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\usecases\AddProductUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\usecases\AddProductUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.products.application.dtos.ProductCreateDTO import ProductCreateDTO
 from src.features.products.domain.entities.Product import Product
@@ -2158,7 +2158,7 @@ class AddProductUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 42/111: src\features\products\application\usecases\GetProductByIdUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\usecases\GetProductByIdUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\usecases\GetProductByIdUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
@@ -2187,7 +2187,7 @@ class GetProductByIdUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 43/111: src\features\products\application\usecases\GetProductsDataForCatalogUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\usecases\GetProductsDataForCatalogUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\usecases\GetProductsDataForCatalogUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
@@ -2238,7 +2238,7 @@ class GetProductsDataForCatalogUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 44/111: src\features\products\application\usecases\GetProductsUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\usecases\GetProductsUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\usecases\GetProductsUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
@@ -2267,7 +2267,7 @@ class GetProductsUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 45/111: src\features\products\application\usecases\GetStockItemsUsecase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\application\usecases\GetStockItemsUsecase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\application\usecases\GetStockItemsUsecase.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -2323,7 +2323,7 @@ class GetStockItemsUsecase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 46/111: src\features\products\domain\entities\Product.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\domain\entities\Product.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\domain\entities\Product.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -2351,7 +2351,7 @@ class Product(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 47/111: src\features\products\domain\value_objects\ProductIngredientVO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\domain\value_objects\ProductIngredientVO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\domain\value_objects\ProductIngredientVO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel, ConfigDict
 
@@ -2369,7 +2369,7 @@ class ProductIngredientVO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 48/111: src\features\products\infrastructure\models\ProductORM.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\infrastructure\models\ProductORM.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\infrastructure\models\ProductORM.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy import JSON, Column, Integer, String
 
@@ -2394,7 +2394,7 @@ class ProductORM(Base):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 49/111: src\features\products\presentation\controllers\AddProductDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\controllers\AddProductDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\controllers\AddProductDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Callable, List
 
@@ -2526,7 +2526,7 @@ class AddProductDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 50/111: src\features\products\presentation\controllers\ProductDetailsDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\controllers\ProductDetailsDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\controllers\ProductDetailsDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.ingredients.application.usecases.GetIngredientByIdUseCase import (
     GetIngredientByIDUseCase,
@@ -2599,7 +2599,7 @@ class ProductDetailsDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 51/111: src\features\products\presentation\controllers\ProductsTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\controllers\ProductsTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\controllers\ProductsTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.ingredients.application.usecases.GetIngredientByIdUseCase import (
     GetIngredientByIDUseCase,
@@ -2684,7 +2684,7 @@ class ProductsTabPresenter:
 
         product = self.get_product_by_id_usecase.execute(id)
 
-        presenter = ProductDetailsDialogPresenter(
+        self._dialog_presenter = ProductDetailsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_ingredient_by_id_usecase=self.get_ingredient_by_id_usecase,
@@ -2709,7 +2709,7 @@ class ProductsTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 52/111: src\features\products\presentation\PQ\dialogs\AddProductDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\PQ\dialogs\AddProductDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\PQ\dialogs\AddProductDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -2845,7 +2845,7 @@ class AddProductDialog(IAddProductDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 53/111: src\features\products\presentation\PQ\dialogs\ProductDetailsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\PQ\dialogs\ProductDetailsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\PQ\dialogs\ProductDetailsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -2993,7 +2993,7 @@ class ProductDetailsDialog(IProductDetailsDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 54/111: src\features\products\presentation\PQ\tabs\CatalogTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\products\presentation\PQ\tabs\CatalogTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\products\presentation\PQ\tabs\CatalogTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -3081,7 +3081,7 @@ class CatalogTab(ICatalogTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 55/111: src\features\reports\application\dtos\ReportTransactionDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\dtos\ReportTransactionDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\dtos\ReportTransactionDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from datetime import datetime
 
@@ -3104,7 +3104,7 @@ class ReportTransactionDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 56/111: src\features\reports\application\dtos\TransactionFiltersDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\dtos\TransactionFiltersDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\dtos\TransactionFiltersDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from datetime import datetime
 from typing import Optional
@@ -3126,7 +3126,7 @@ class TransactionFiltersDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 57/111: src\features\reports\application\dtos\TransactionsInfoDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\dtos\TransactionsInfoDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\dtos\TransactionsInfoDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -3144,7 +3144,7 @@ class TransactionsInfoDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 58/111: src\features\reports\application\interfaces\IReportsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\interfaces\IReportsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\interfaces\IReportsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable, List
@@ -3184,7 +3184,7 @@ class IReportsDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 59/111: src\features\reports\application\interfaces\IReportsTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\interfaces\IReportsTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\interfaces\IReportsTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -3206,7 +3206,7 @@ class IReportsTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 60/111: src\features\reports\application\usecases\GetTransactionsByFiltersUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\usecases\GetTransactionsByFiltersUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\usecases\GetTransactionsByFiltersUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.reports.application.dtos.ReportTransactionDTO import (
     ReportTransactionDTO,
@@ -3272,7 +3272,7 @@ class GetTransactionsByFiltersUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 61/111: src\features\reports\application\usecases\GetTransactionsInfoUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\application\usecases\GetTransactionsInfoUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\application\usecases\GetTransactionsInfoUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
@@ -3302,7 +3302,7 @@ class GetTransactionsInfoUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 62/111: src\features\reports\presentation\controllers\ReportsTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\presentation\controllers\ReportsTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\presentation\controllers\ReportsTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.usecases.GetBranchesUseCase import (
     GetBranchesUseCase,
@@ -3351,7 +3351,7 @@ class ReportsTabPresenter:
     def on_open_reports_requested(self):
         dialog = ReportsDialog()
 
-        presenter = ReportsDialogPresenter(
+        self._dialog_presenter = ReportsDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_transactions_by_filters_usecase=self.get_transactions_by_filters_usecase,
@@ -3373,7 +3373,7 @@ class ReportsTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 63/111: src\features\reports\presentation\controllers\ReposrtDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\presentation\controllers\ReposrtDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\presentation\controllers\ReposrtDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.usecases.GetBranchesUseCase import (
     GetBranchesUseCase,
@@ -3450,7 +3450,7 @@ class ReportsDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 64/111: src\features\reports\presentation\PQ\dialogs\ReportsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\presentation\PQ\dialogs\ReportsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\presentation\PQ\dialogs\ReportsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -3669,7 +3669,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 65/111: src\features\reports\presentation\PQ\tabs\ReportsTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\reports\presentation\PQ\tabs\ReportsTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\reports\presentation\PQ\tabs\ReportsTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QGroupBox, QLabel, QPushButton, QVBoxLayout
@@ -3739,7 +3739,7 @@ class ReportsTab(IReportsTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 66/111: src\features\stock_info\application\DTOs\StockDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\application\DTOs\StockDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\application\DTOs\StockDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -3756,7 +3756,7 @@ class StockDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 67/111: src\features\stock_info\application\interfaces\IStockDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\application\interfaces\IStockDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\application\interfaces\IStockDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -3794,7 +3794,7 @@ class IStockDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 68/111: src\features\stock_info\application\interfaces\IStockTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\application\interfaces\IStockTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\application\interfaces\IStockTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -3816,7 +3816,7 @@ class IStockTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 69/111: src\features\stock_info\application\usecases\LoadStockItemsUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\application\usecases\LoadStockItemsUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\application\usecases\LoadStockItemsUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.stock_info.application.DTOs.StockDisplayDTO import StockDisplayDTO
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
@@ -3849,7 +3849,7 @@ class LoadStockItemsUseCase:
 
         if items is None:
             return ProcessDTO(
-                status=False, message="Item-ов нету!", error=f"Items not found!"
+                status=False, message="Item-ов нету!", error="Items not found!"
             )
         for item in items:
             product = self.products_repo.get_product_by_id(item.product_id)
@@ -3879,7 +3879,7 @@ class LoadStockItemsUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 70/111: src\features\stock_info\domain\entities\StockItem.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\domain\entities\StockItem.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\domain\entities\StockItem.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -3902,7 +3902,7 @@ class StockItem(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 71/111: src\features\stock_info\infrastructure\models\StockItemORM.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\infrastructure\models\StockItemORM.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\infrastructure\models\StockItemORM.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy import Column, Integer, UniqueConstraint
 
@@ -3935,7 +3935,7 @@ class StockItemORM(Base):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 72/111: src\features\stock_info\presentation\controllers\StockDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\presentation\controllers\StockDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\presentation\controllers\StockDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.usecases.GetBranchesUseCase import (
     GetBranchesUseCase,
@@ -4005,7 +4005,7 @@ class StockDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 73/111: src\features\stock_info\presentation\controllers\StockTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\presentation\controllers\StockTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\presentation\controllers\StockTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.application.usecases.GetBranchesUseCase import (
     GetBranchesUseCase,
@@ -4046,7 +4046,7 @@ class StockTabPresenter:
     def on_open_stock_dialog_requested(self):
         dialog = StockDialog()
 
-        presenter = StockDialogPresenter(
+        self._dialog_presenter = StockDialogPresenter(
             view=dialog,
             message_service=self.message_service,
             get_branches_usecase=self.get_branches_usecase,
@@ -4063,7 +4063,7 @@ class StockTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 74/111: src\features\stock_info\presentation\PQ\dialogs\StockDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\presentation\PQ\dialogs\StockDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\presentation\PQ\dialogs\StockDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtWidgets import (
     QComboBox,
@@ -4195,7 +4195,7 @@ class StockDialog(IStockDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 75/111: src\features\stock_info\presentation\PQ\tabs\StockTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\stock_info\presentation\PQ\tabs\StockTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\stock_info\presentation\PQ\tabs\StockTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QLabel, QPushButton, QVBoxLayout
@@ -4255,7 +4255,7 @@ class StockTab(IStockTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 76/111: src\features\transactions\application\dtos\TransactionDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\dtos\TransactionDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\dtos\TransactionDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from datetime import datetime
 from typing import List
@@ -4285,7 +4285,7 @@ class TransactionDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 77/111: src\features\transactions\application\interfaces\ITransactionItemsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\interfaces\ITransactionItemsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\interfaces\ITransactionItemsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable
@@ -4323,7 +4323,7 @@ class ITransactionItemsDialog(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 78/111: src\features\transactions\application\interfaces\ITransactionTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\interfaces\ITransactionTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\interfaces\ITransactionTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Callable, List
@@ -4365,7 +4365,7 @@ class ITransactionTab(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 79/111: src\features\transactions\application\usecases\AddTransactionUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\usecases\AddTransactionUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\usecases\AddTransactionUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.stock_info.domain.entities.StockItem import StockItem
 from src.features.transactions.application.dtos.TransactionDisplayDTO import (
@@ -4467,7 +4467,7 @@ class AddTransactionUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 80/111: src\features\transactions\application\usecases\GetWarehousesUseCase.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\usecases\GetWarehousesUseCase.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\usecases\GetWarehousesUseCase.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -4510,7 +4510,7 @@ class GetWarehousesUseCase:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 81/111: src\features\transactions\application\value_objects\TransactionItem.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\application\value_objects\TransactionItem.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\application\value_objects\TransactionItem.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel, ConfigDict
 
@@ -4529,7 +4529,7 @@ class TransactionItem(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 82/111: src\features\transactions\domain\entities\Transaction.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\domain\entities\Transaction.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\domain\entities\Transaction.py
 ────────────────────────────────────────────────────────────────────────────────
 from datetime import datetime
 from typing import List
@@ -4561,7 +4561,7 @@ class Transaction(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 83/111: src\features\transactions\infrastructure\models\TransactionORM.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\infrastructure\models\TransactionORM.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\infrastructure\models\TransactionORM.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy import JSON, Boolean, Column, Float, Integer, String
 
@@ -4590,7 +4590,7 @@ class TransactionORM(Base):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 84/111: src\features\transactions\presentation\controllers\TransactionItemsDialogPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\presentation\controllers\TransactionItemsDialogPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\presentation\controllers\TransactionItemsDialogPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Callable, List
 
@@ -4688,7 +4688,7 @@ class TransactionItemsDialogPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 85/111: src\features\transactions\presentation\controllers\TransactionTabPresenter.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\presentation\controllers\TransactionTabPresenter.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\presentation\controllers\TransactionTabPresenter.py
 ────────────────────────────────────────────────────────────────────────────────
 from datetime import datetime
 from typing import Callable, List
@@ -4821,7 +4821,7 @@ class TransactionTabPresenter:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 86/111: src\features\transactions\presentation\PQ\dialogs\TransactionItemsDialog.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\presentation\PQ\dialogs\TransactionItemsDialog.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\presentation\PQ\dialogs\TransactionItemsDialog.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -4989,7 +4989,7 @@ class TransactionItemsDialog(ITransactionItemsDialog, IABCDialog):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 87/111: src\features\transactions\presentation\PQ\tabs\TransactionTab.py
-Полный путь: G:\Мой диск\SweetsBase\src\features\transactions\presentation\PQ\tabs\TransactionTab.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\features\transactions\presentation\PQ\tabs\TransactionTab.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -5177,7 +5177,7 @@ class TransactionTab(ITransactionTab, IABCWidget):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 88/111: src\shared\application\dtos\ObjectDisplayDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\dtos\ObjectDisplayDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\dtos\ObjectDisplayDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from pydantic import BaseModel
 
@@ -5193,7 +5193,7 @@ class ObjectDisplayDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 89/111: src\shared\application\dtos\ProcessDTO.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\dtos\ProcessDTO.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\dtos\ProcessDTO.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import Any, Optional
 
@@ -5213,7 +5213,7 @@ class ProcessDTO(BaseModel):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 90/111: src\shared\application\Interfaces\IABCWidget.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IABCWidget.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IABCWidget.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABCMeta
 
@@ -5242,7 +5242,7 @@ class IABCMainWindow(QMainWindow, metaclass=MetaQObjectABCMeta):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 91/111: src\shared\application\Interfaces\IBranchesRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IBranchesRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IBranchesRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import List
@@ -5282,7 +5282,7 @@ class IBranchesRepository(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 92/111: src\shared\application\Interfaces\IIngredientsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IIngredientsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IIngredientsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import List
@@ -5327,7 +5327,7 @@ class IIngredientsRepository(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 93/111: src\shared\application\Interfaces\IMessageService.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IMessageService.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IMessageService.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 
@@ -5352,7 +5352,7 @@ class IMessageService(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 94/111: src\shared\application\Interfaces\IProductsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IProductsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IProductsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import List
@@ -5392,7 +5392,7 @@ class IProductsRepository(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 95/111: src\shared\application\Interfaces\IStockItemsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\IStockItemsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\IStockItemsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import Tuple
@@ -5438,7 +5438,7 @@ class IStockItemsRepository(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 96/111: src\shared\application\Interfaces\ITransactionsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\Interfaces\ITransactionsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\Interfaces\ITransactionsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from abc import ABC, abstractmethod
 from typing import List
@@ -5468,7 +5468,7 @@ class ITransactionsRepository(ABC):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 97/111: src\shared\application\mediators\AddTransactionMediator.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\mediators\AddTransactionMediator.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\mediators\AddTransactionMediator.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.products.presentation.controllers.ProductsTabPresenter import (
     ProductsTabPresenter,
@@ -5506,7 +5506,7 @@ class AddTransactionMediator:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 98/111: src\shared\application\mediators\CreateBranchMediator.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\mediators\CreateBranchMediator.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\mediators\CreateBranchMediator.py
 ────────────────────────────────────────────────────────────────────────────────
 from src.features.branches.presentation.controllers.BranchTabPresenter import (
     BranchTabPresenter,
@@ -5536,7 +5536,7 @@ class CreateBranchMediator:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 99/111: src\shared\application\usecases\Decorators\BaseUseCaseDecorator.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\application\usecases\Decorators\BaseUseCaseDecorator.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\application\usecases\Decorators\BaseUseCaseDecorator.py
 ────────────────────────────────────────────────────────────────────────────────
 import functools
 import logging
@@ -5551,7 +5551,7 @@ def usecase_func(func: Callable[..., T]) -> Callable[..., T]:
     @functools.wraps(func)
     def wrapper(self, *args, **kwargs):
         try:
-            result = func(self, *args, **kwargs)
+            return func(self, *args, **kwargs)
         except Exception as e:
             logger = logging.getLogger(self.__class__.__name__)
             logger.exception(f"Exception in {func.__name__}")
@@ -5568,7 +5568,7 @@ def usecase_func(func: Callable[..., T]) -> Callable[..., T]:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 100/111: src\shared\infrastructure\Base.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\Base.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\Base.py
 ────────────────────────────────────────────────────────────────────────────────
 from sqlalchemy.orm import declarative_base
 
@@ -5581,7 +5581,7 @@ Base = declarative_base()
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 101/111: src\shared\infrastructure\Database.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\Database.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\Database.py
 ────────────────────────────────────────────────────────────────────────────────
 import os
 from pathlib import Path
@@ -5615,7 +5615,7 @@ class Database:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 102/111: src\shared\infrastructure\LoggerController.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\LoggerController.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\LoggerController.py
 ────────────────────────────────────────────────────────────────────────────────
 import logging
 import sys
@@ -5643,7 +5643,7 @@ class LoggerController:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 103/111: src\shared\infrastructure\repositories\BranchesRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\BranchesRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\BranchesRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -5705,7 +5705,7 @@ class BranchesRepository(IBranchesRepository):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 104/111: src\shared\infrastructure\repositories\Decorators\RepositoryDecorator.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\Decorators\RepositoryDecorator.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\Decorators\RepositoryDecorator.py
 ────────────────────────────────────────────────────────────────────────────────
 import functools
 from typing import Callable, TypeVar
@@ -5736,7 +5736,7 @@ def repo_func(func: Callable[..., T]) -> Callable[..., T]:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 105/111: src\shared\infrastructure\repositories\IngredientsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\IngredientsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\IngredientsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -5808,7 +5808,7 @@ class IngredientsRepository(IIngredientsRepository):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 106/111: src\shared\infrastructure\repositories\ProductsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\ProductsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\ProductsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -5874,7 +5874,7 @@ class ProductsRepository(IProductsRepository):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 107/111: src\shared\infrastructure\repositories\StockItemsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\StockItemsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\StockItemsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List, Tuple
 
@@ -6008,7 +6008,7 @@ class StockItemsRepository(IStockItemsRepository):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 108/111: src\shared\infrastructure\repositories\TransactionsRepository.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\infrastructure\repositories\TransactionsRepository.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\infrastructure\repositories\TransactionsRepository.py
 ────────────────────────────────────────────────────────────────────────────────
 from typing import List
 
@@ -6046,12 +6046,12 @@ class TransactionsRepository(ITransactionsRepository):
     def get_transactions_info(self, session=None) -> TransactionsInfoDTO:
         in_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival == True)
+            .filter(TransactionORM.is_arrival is True)
             .count()
         )
         out_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival == False)
+            .filter(TransactionORM.is_arrival is False)
             .count()
         )
 
@@ -6102,22 +6102,24 @@ class TransactionsRepository(ITransactionsRepository):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 109/111: src\shared\presentation\PQ\QtMessageService.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\presentation\PQ\QtMessageService.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\presentation\PQ\QtMessageService.py
 ────────────────────────────────────────────────────────────────────────────────
+from typing import Optional
+
 from PySide6.QtWidgets import QMessageBox, QWidget
 
 from src.shared.application.Interfaces.IMessageService import IMessageService
 
 
 class QtMessageService(IMessageService):
-    def show_success(self, title: str, message: str, parent_widget: QWidget = None):
+    def show_success(self, title: str, message: str, parent_widget: Optional[QWidget] = None):
         QMessageBox.information(parent_widget, title, message)
 
-    def show_error(self, title: str, message: str, parent_widget: QWidget = None):
+    def show_error(self, title: str, message: str, parent_widget: Optional[QWidget] = None):
         QMessageBox.critical(parent_widget, title, message)
 
     def show_question(
-        self, title: str, message: str, parent_widget: QWidget = None
+        self, title: str, message: str, parent_widget: Optional[QWidget] = None
     ) -> bool:
         result = QMessageBox.question(parent_widget, title, message)
         return result == QMessageBox.Yes
@@ -6129,7 +6131,7 @@ class QtMessageService(IMessageService):
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 110/111: src\shared\presentation\Window.py
-Полный путь: G:\Мой диск\SweetsBase\src\shared\presentation\Window.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\shared\presentation\Window.py
 ────────────────────────────────────────────────────────────────────────────────
 import sys
 
@@ -6235,7 +6237,7 @@ class Window:
 
 ────────────────────────────────────────────────────────────────────────────────
 Файл 111/111: src\tests\Conftest.py
-Полный путь: G:\Мой диск\SweetsBase\src\tests\Conftest.py
+Полный путь: D:\Repositories\Python\SweetBase\SweetBaseDeskApp\src\tests\Conftest.py
 ────────────────────────────────────────────────────────────────────────────────
 import os
 import sys

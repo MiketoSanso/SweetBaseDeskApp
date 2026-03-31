@@ -29,7 +29,7 @@ class LoadStockItemsUseCase:
 
         if items is None:
             return ProcessDTO(
-                status=False, message="Item-ов нету!", error=f"Items not found!"
+                status=False, message="Item-ов нету!", error="Items not found!"
             )
         for item in items:
             product = self.products_repo.get_product_by_id(item.product_id)

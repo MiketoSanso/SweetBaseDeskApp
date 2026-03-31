@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Boolean, Column, Float, Integer, String
+from sqlalchemy import JSON, Boolean, Column, Float, Integer, String, DateTime
 
 from src.shared.infrastructure.Base import Base
 
@@ -13,7 +13,7 @@ class TransactionORM(Base):
     warehouse_id = Column(Integer, nullable=False)
     items = Column(JSON, default=list)
     total_amount = Column(Float)
-    timestamp = Column(String, nullable=False)
+    timestamp = Column(DateTime, nullable=False)
     user_note = Column(String, nullable=False)
 
     __mapper_args__ = {"primary_key": [local_id]}

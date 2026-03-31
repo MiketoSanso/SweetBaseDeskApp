@@ -28,7 +28,7 @@ class DeleteIngredientUseCase:
             return ProcessDTO(status=True, message="Ингредиент удалён!")
         except Exception as e:
             logger = logging.getLogger(__name__)
-            logger.exception(f"Exception in GetIngredientsUseCase")
+            logger.exception("Exception in GetIngredientsUseCase")
             return ProcessDTO(
                 status=False,
                 message="Ошибка при загрузке ингредиентов!",
