@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import Tuple
 
 from src.features.stock_info.domain.entities.StockItem import StockItem
 from src.shared.infrastructure.Database import Database
@@ -14,7 +13,7 @@ class IStockItemsRepository(ABC):
         pass
 
     @abstractmethod
-    def get_all_count_stocks(self, id_stock_items: tuple[int], session=None) -> tuple[int]:
+    def get_all_count_stocks(self, id_stock_items: tuple[int, ...], session=None) -> dict[int, int]:
         pass
 
     @abstractmethod
@@ -24,7 +23,7 @@ class IStockItemsRepository(ABC):
         pass
 
     @abstractmethod
-    def get_stock_items(self, branch_id: int) -> Tuple[StockItem] | None:
+    def get_stock_items(self, branch_id: int) -> tuple[StockItem] | None:
         pass
 
     @abstractmethod

@@ -1,4 +1,4 @@
-from typing import Callable, List
+from typing import Callable  
 
 from src.features.products.application.usecases.GetProductsUseCase import (
     GetProductsUseCase,
@@ -24,7 +24,7 @@ class TransactionItemsDialogPresenter:
         self.message_service = message_service
         self.get_products_usecase = get_products_usecase
 
-        self.items: List[TransactionItem] = []
+        self.items: list[TransactionItem] = []
         self.callbacks = []
 
         self.view.set_on_items_confirmed(self.on_items_confirmed)
@@ -51,7 +51,7 @@ class TransactionItemsDialogPresenter:
 
         self.view.set_products(view_products)
 
-    def set_on_items_confirmed(self, callback: Callable[[List[TransactionItem]], None]):
+    def set_on_items_confirmed(self, callback: Callable[[list[TransactionItem]], None]):
         self.callbacks.append(callback)
 
     def on_items_confirmed(self):

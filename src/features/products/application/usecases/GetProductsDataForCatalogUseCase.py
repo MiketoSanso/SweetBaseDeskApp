@@ -1,5 +1,3 @@
-from typing import List
-
 from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
 from src.features.products.domain.entities.Product import Product
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
@@ -19,7 +17,7 @@ class GetProductsDataForCatalogUseCase:
 
     @usecase_func
     def execute(self) -> ProcessDTO:
-        products: List[Product] = self.db_products.get_products()
+        products: list[Product] = self.db_products.get_products()
 
         if not products:
             return ProcessDTO(
@@ -30,8 +28,29 @@ class GetProductsDataForCatalogUseCase:
 
         product_ids = [product.local_id for product in products]
 
-        stock_item_counts: tuple[int] = self.db_stock_items.get_all_count_stocks(tuple(product_ids))
+        stock_item_counts: dict[int, int] = self.db_stock_items.get_all_count_stocks(tuple(product_ids))
 
+        display_products: list[ProductDisplayDTO] = []
 
+        if stock_item_counts:
+            for product in products:
+                display_products.append(ProductDisplayDTO(
+                    id=product.local_id,
+                    name=product.name,
+                    stock_count=stock_item_counts.get(product.local_id, 0),
+                ))
 
-        return ProcessDTO(status=True, message="Данные получены успешно!", data=products)
+        else:
+            for product in products:
+                display_products.append(ProductDisplayDTO(
+                    id=product.local_id,
+                    name=product.name,
+                    stock_count=0,
+                ))
+
+        return ProcessDTO(
+            status=True,
+            message="Данные получены успешно!",
+            data=tuple(display_products)
+        )
+

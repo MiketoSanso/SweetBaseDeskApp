@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -158,7 +158,7 @@ class TransactionTab(ITransactionTab, IABCWidget):
         else:
             self.trans_warehouse_combo.addItem("Нет складов", None)
 
-    def update_display(self, items: List[TransactionItem]):
+    def update_display(self, items: list[TransactionItem]):
         """Обновляет таблицу товаров"""
         self.trans_items_table.setRowCount(len(items))
 

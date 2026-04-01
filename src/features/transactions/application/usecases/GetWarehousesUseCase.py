@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.shared.application.dtos.ObjectDisplayDTO import ObjectDisplayDTO
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
@@ -21,7 +21,7 @@ class GetWarehousesUseCase:
 
         warehouses = branch.warehouses
 
-        warehouses_dto: List[ObjectDisplayDTO] = []
+        warehouses_dto: list[ObjectDisplayDTO] = []
         for warehouse in warehouses:
             warehouse = ObjectDisplayDTO(
                 object_id=warehouse, object_name=f"Склад_{warehouse}"

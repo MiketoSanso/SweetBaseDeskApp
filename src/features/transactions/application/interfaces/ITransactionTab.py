@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Callable, List
+from typing import Callable  
 
 from src.features.transactions.application.value_objects.TransactionItem import (
     TransactionItem,
@@ -28,5 +28,5 @@ class ITransactionTab(ABC):
         pass
 
     @abstractmethod
-    def update_display(self, items: List[TransactionItem]):
+    def update_display(self, items: list[TransactionItem]):
         pass

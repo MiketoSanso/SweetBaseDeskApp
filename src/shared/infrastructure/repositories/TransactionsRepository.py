@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.features.reports.application.dtos.TransactionFiltersDTO import (
     TransactionFiltersDTO,
@@ -48,7 +48,7 @@ class TransactionsRepository(ITransactionsRepository):
         if last:
             last_date = last.timestamp
         else:
-            last_date = "Транзакций не было!"
+            last_date = None
 
         transaction_info = TransactionsInfoDTO(
             total_transactions=in_count + out_count,
@@ -62,7 +62,7 @@ class TransactionsRepository(ITransactionsRepository):
     @repo_func
     def get_transactions(
         self, filters: TransactionFiltersDTO = None, session=None
-    ) -> List[Transaction]:
+    ) -> list[Transaction]:
         query = session.query(TransactionORM)
 
         if filters:

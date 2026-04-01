@@ -1,14 +1,14 @@
-from typing import List
+ 
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QFormLayout,
     QHBoxLayout,
-    QLabel,
-    QLineEdit,
     QListWidget,
     QListWidgetItem,
+    QLabel,
+    QLineEdit,
     QPushButton,
     QVBoxLayout,
 )
@@ -111,7 +111,7 @@ class AddProductDialog(IAddProductDialog, IABCDialog):
     def close_dialog(self):
         self.accept()
 
-    def update_display(self, ingredients: List[ProductIngredientDisplayDTO]):
+    def update_display(self, ingredients: list[ProductIngredientDisplayDTO]):
         self.selected_list.clear()
 
         for item in ingredients:

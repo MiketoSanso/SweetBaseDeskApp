@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
 from src.features.products.domain.entities.Product import Product
@@ -15,7 +15,7 @@ class ProductsRepository(IProductsRepository):
         super().__init__(db)
 
     @repo_func
-    def get_products(self, session=None) -> List[Product]:
+    def get_products(self, session=None) -> list[Product]:
         orm_products = session.query(ProductORM).all()
         products = [Product.model_validate(orm_product) for orm_product in orm_products]
         products_list = [product for product in products]

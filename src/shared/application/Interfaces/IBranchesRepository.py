@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+ 
 
 from src.features.branches.domain.entities.Branch import Branch
 from src.shared.infrastructure.Database import Database
@@ -10,7 +10,7 @@ class IBranchesRepository(ABC):
         self.db = db
 
     @abstractmethod
-    def get_branches(self) -> List[Branch]:
+    def get_branches(self) -> list[Branch]:
         pass
 
     @abstractmethod

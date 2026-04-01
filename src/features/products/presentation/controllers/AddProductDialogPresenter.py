@@ -1,4 +1,4 @@
-from typing import Callable, List
+from typing import Callable  
 
 from src.features.ingredients.application.usecases.GetIngredientByIdUseCase import (
     GetIngredientByIDUseCase,
@@ -44,8 +44,8 @@ class AddProductDialogPresenter:
         self.get_data_ingredient_by_id = get_data_ingredient_by_id
 
         self._success_callbacks = []
-        self.product_ingredients: List[ProductIngredientDisplayDTO] = []
-        self.tech_ingredients: List[ProductIngredientVO] = []
+        self.product_ingredients: list[ProductIngredientDisplayDTO] = []
+        self.tech_ingredients: list[ProductIngredientVO] = []
 
         self.view.set_on_save_product_requested(
             self.tech_ingredients, self.on_save_product_requested

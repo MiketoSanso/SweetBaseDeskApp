@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Callable, List
+from typing import Callable
 
 from src.shared.application.dtos.ObjectDisplayDTO import ObjectDisplayDTO
 
@@ -18,7 +18,7 @@ class IReportsDialog(ABC):
         pass
 
     @abstractmethod
-    def set_warehouses(self, warehouses: List[ObjectDisplayDTO]):
+    def set_warehouses(self, warehouses: list[ObjectDisplayDTO]):
         pass
 
     @abstractmethod

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+ 
 
 from src.features.ingredients.domain.entities.Ingredient import Ingredient
 from src.shared.infrastructure.Database import Database
@@ -10,7 +10,7 @@ class IIngredientsRepository(ABC):
         self.db = db
 
     @abstractmethod
-    def get_ingredients(self) -> List[Ingredient]:
+    def get_ingredients(self) -> list[Ingredient]:
         pass
 
     @abstractmethod

@@ -52,9 +52,13 @@ class ReportsTab(IReportsTab, IABCWidget):
         self.view_reports_btn.clicked.connect(callback)
 
     def display_stats(self, transactions_info: TransactionsInfoDTO):
+        text_date = transactions_info.last_transaction_date
+        if transactions_info.last_transaction_date is None:
+            text_date = "Транзакций не было!"
+
         self.stats_label.setText(
             f"Всего транзакций: {transactions_info.total_transactions}\n"
             f"Приходов: {transactions_info.in_count}\n"
             f"Уходов: {transactions_info.out_count}\n"
-            f"Последняя транзакция: {transactions_info.last_transaction_date}"
+            f"Последняя транзакция: {text_date}"
         )

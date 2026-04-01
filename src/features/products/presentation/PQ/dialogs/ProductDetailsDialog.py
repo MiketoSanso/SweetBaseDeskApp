@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
@@ -107,7 +107,7 @@ class ProductDetailsDialog(IProductDetailsDialog, IABCDialog):
         """Устанавливает название продукта"""
         self.title_label.setText(product_name)
 
-    def display_stock(self, stock_items: List[StockItemDisplayDTO]):
+    def display_stock(self, stock_items: list[StockItemDisplayDTO]):
 
         if stock_items:
             self.stock_table.setRowCount(len(stock_items))
@@ -123,7 +123,7 @@ class ProductDetailsDialog(IProductDetailsDialog, IABCDialog):
             self.stock_table.setItem(0, 1, QTableWidgetItem(""))
             self.stock_table.setItem(0, 2, QTableWidgetItem(""))
 
-    def display_ingredients(self, ingredients: List[IngredientDisplayDTO], total_cost):
+    def display_ingredients(self, ingredients: list[IngredientDisplayDTO], total_cost):
         self.ingredients_table.setRowCount(len(ingredients))
 
         for i, ing in enumerate(ingredients):

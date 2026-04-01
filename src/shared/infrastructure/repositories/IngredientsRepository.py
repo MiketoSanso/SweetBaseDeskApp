@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.features.ingredients.domain.entities.Ingredient import Ingredient
 from src.features.ingredients.infrastructure.models.IngredientORM import IngredientORM
@@ -16,7 +16,7 @@ class IngredientsRepository(IIngredientsRepository):
         super().__init__(db)
 
     @repo_func
-    def get_ingredients(self, session=None) -> List[Ingredient]:
+    def get_ingredients(self, session=None) -> list[Ingredient]:
         orm_ingredients = session.query(IngredientORM).all()
         ingredients = [
             Ingredient.model_validate(orm_ingredient)

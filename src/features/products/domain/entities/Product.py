@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from pydantic import BaseModel
 
@@ -12,7 +12,7 @@ class Product(BaseModel):
     server_id: int | None = None
     name: str
     image_path: str | None = None
-    ingredients: List[ProductIngredientVO]
+    ingredients: list[ProductIngredientVO]
 
     class Config:
         from_attributes = True

@@ -1,4 +1,5 @@
-from typing import List, Tuple
+from sqlalchemy import func
+from sqlalchemy.engine import row
 
 from src.features.stock_info.domain.entities.StockItem import StockItem
 from src.features.stock_info.infrastructure.models.StockItemORM import StockItemORM
@@ -26,15 +27,18 @@ class StockItemsRepository(IStockItemsRepository):
         return count
 
     @repo_func
-    def get_all_count_stocks(self, id_stock_items: tuple[int], session=None) -> tuple[int]:
-        count_stock_items: List[int] = []
+    def get_all_count_stocks(self, id_stock_items: tuple[int, ...], session=None) -> dict[int, int]:
+        result = session.query(
+            StockItemORM.local_id,
+            func.sum(StockItemORM.quantity).label('total_quantity')
+        ).filter(StockItemORM.product_id.in_(id_stock_items)
+                 ).group_by(StockItemORM.product_id
+                            ).all()
 
-        for product in products:
-            count_stock = self.db_stock_items.get_count_product_in_stocks(
-                product.local_id
-            )
 
-        return tuple(count_stock_items)
+        stock_counts = {row.local_id: row.total_quantity for row in result}
+
+        return stock_counts
 
     @repo_func
     def get_item_in_stock(
@@ -60,7 +64,7 @@ class StockItemsRepository(IStockItemsRepository):
     @repo_func
     def get_items_in_stock(
         self, branch_id: int, stock_id: int, session=None
-    ) -> List[StockItem] | None:
+    ) -> list[StockItem] | None:
         items_orm = (
             session.query(StockItemORM)
             .filter(
@@ -81,7 +85,7 @@ class StockItemsRepository(IStockItemsRepository):
         return items
 
     @repo_func
-    def get_stock_items(self, branch_id: int, session=None) -> Tuple[StockItem] | None:
+    def get_stock_items(self, branch_id: int, session=None) -> tuple[StockItem] | None:
         items_orm = (
             session.query(StockItemORM)
             .filter(StockItemORM.branch_id == branch_id)

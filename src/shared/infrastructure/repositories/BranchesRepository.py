@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.features.branches.domain.entities.Branch import Branch
 from src.features.branches.infrastructure.models.BranchORM import BranchORM
@@ -14,7 +14,7 @@ class BranchesRepository(IBranchesRepository):
         super().__init__(db)
 
     @repo_func
-    def get_branches(self, session=None) -> List[Branch] | None:
+    def get_branches(self, session=None) -> list[Branch] | None:
         orm_branches = session.query(BranchORM).all()
         branches = [Branch.model_validate(orm_branch) for orm_branch in orm_branches]
         return branches

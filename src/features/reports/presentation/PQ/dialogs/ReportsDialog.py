@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from PySide6.QtCore import QDate
 from PySide6.QtGui import QColor
@@ -170,7 +170,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
         self.branch_combo.currentIndexChanged.connect(on_changed)
 
     # Методы для внешнего управления
-    def set_branches(self, branches: List[Branch], has_branches):
+    def set_branches(self, branches: list[Branch], has_branches):
         """Заполняет список филиалов"""
         self.branch_combo.clear()
         self.branch_combo.addItem("Все", "")
@@ -178,14 +178,14 @@ class ReportsDialog(IReportsDialog, IABCDialog):
             for branch in branches:
                 self.branch_combo.addItem(branch.name, branch.local_id)
 
-    def set_warehouses(self, warehouses: List[ObjectDisplayDTO]):
+    def set_warehouses(self, warehouses: list[ObjectDisplayDTO]):
         """Заполняет список складов"""
         self.warehouse_combo.clear()
         self.warehouse_combo.addItem("Все", "")
         for wh in warehouses:
             self.warehouse_combo.addItem(f"{wh.object_name}", wh.object_id)
 
-    def display_transactions(self, transactions: List[ReportTransactionDTO]):
+    def display_transactions(self, transactions: list[ReportTransactionDTO]):
         """Отображает транзакции в таблице"""
         if not transactions:
             self.transactions_table.setRowCount(0)

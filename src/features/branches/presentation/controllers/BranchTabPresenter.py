@@ -1,4 +1,4 @@
-from typing import Callable, List
+from typing import Callable
 
 from src.features.branches.application.interfaces.IBranchesTab import IBranchesTab
 from src.features.branches.application.usecases.AddBranchUseCase import AddBranchUseCase
@@ -27,7 +27,7 @@ class BranchTabPresenter:
         self.add_branch_usecase = add_branch_usecase
         self.get_branches_usecase = get_branches_usecase
 
-        self.callbacks: List[Callable[[], None]] = []
+        self.callbacks: list[Callable[[], None]] = []
 
         self.view.set_on_add_branch_requested(self.on_add_branch_requested)
         self.view.set_on_load_branches_requested(self.on_load_branches_requested)

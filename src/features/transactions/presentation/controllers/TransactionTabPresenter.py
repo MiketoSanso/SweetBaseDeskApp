@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Callable, List
+from typing import Callable
 
 from src.features.branches.application.usecases.GetBranchesUseCase import (
     GetBranchesUseCase,
@@ -48,8 +48,8 @@ class TransactionTabPresenter:
         self.get_branches_usecase = get_branches_usecase
         self.get_warehouses_usecase = get_warehouses_usecase
 
-        self.items: List[TransactionItem] = []
-        self._create_callbacks: List[Callable[[], None]] = []
+        self.items: list[TransactionItem] = []
+        self._create_callbacks: list[Callable[[], None]] = []
 
         self.view.set_on_add_items_requested(self.on_add_items_requested)
         self.view.set_on_process_transaction_requested(
@@ -118,6 +118,6 @@ class TransactionTabPresenter:
     def set_on_transaction_created(self, callback: Callable[[], None]):
         self._create_callbacks.append(callback)
 
-    def set_transaction_items(self, items: List[TransactionItem]):
+    def set_transaction_items(self, items: list[TransactionItem]):
         self.items.extend(items)
         self.view.update_display(self.items)

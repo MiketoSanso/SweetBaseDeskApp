@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from src.features.products.application.dtos.StockItemDisplayDTO import (
     StockItemDisplayDTO,
@@ -27,7 +27,7 @@ class GetStockItemsUsecase:
                 status=False, message="Продуктов нет!", error="Repository returned None"
             )
 
-        stock_display_items: List[StockItemDisplayDTO] = []
+        stock_display_items: list[StockItemDisplayDTO] = []
 
         for item in stock_items:
             branch = self.branches_repo.get_branch_by_id(item.branch_id)

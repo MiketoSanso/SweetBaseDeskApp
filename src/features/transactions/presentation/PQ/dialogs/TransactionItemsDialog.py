@@ -1,5 +1,3 @@
-from typing import List
-
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QHBoxLayout,
@@ -120,7 +118,7 @@ class TransactionItemsDialog(ITransactionItemsDialog, IABCDialog):
         """Устанавливает колбэк для удаления товара"""
         self._on_remove_callback = callback
 
-    def set_products(self, products: List[ObjectDisplayDTO]):
+    def set_products(self, products: list[ObjectDisplayDTO]):
         """Заполняет список доступных товаров"""
         self.products_list.clear()
         for product in products:
@@ -129,7 +127,7 @@ class TransactionItemsDialog(ITransactionItemsDialog, IABCDialog):
             item.setData(self.PRODUCT_NAME_ROLE, product.object_name)
             self.products_list.addItem(item)
 
-    def update_table(self, items: List[TransactionItem]):
+    def update_table(self, items: list[TransactionItem]):
         """Обновляет таблицу выбранных товаров"""
         self.selected_table.setRowCount(len(items))
 

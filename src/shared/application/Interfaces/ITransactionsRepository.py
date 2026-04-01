@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+ 
 
 from src.features.transactions.domain.entities.Transaction import Transaction
 from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
@@ -16,5 +16,5 @@ class ITransactionsRepository(ABC):
         pass
 
     @abstractmethod
-    def get_transactions(self, filters: dict = None) -> List[Transaction] | None:
+    def get_transactions(self, filters: dict = None) -> list[Transaction] | None:
         pass

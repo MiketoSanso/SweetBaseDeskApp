@@ -1,4 +1,4 @@
-from typing import List
+ 
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -62,7 +62,7 @@ class CatalogTab(ICatalogTab, IABCWidget):
         self.catalog_list.itemDoubleClicked.connect(_on_product_selected)
 
     # Методы для внешнего управления UI
-    def display_products(self, products: List[ProductDisplayDTO], has_products):
+    def display_products(self, products: tuple[ProductDisplayDTO], has_products):
         """Отображает список продуктов"""
         self.catalog_list.clear()
 

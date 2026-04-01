@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Callable, List
+from typing import Callable  
 
 from src.features.products.application.dtos.ProductDisplayDTO import ProductDisplayDTO
 
@@ -18,5 +18,5 @@ class ICatalogTab(ABC):
         pass
 
     @abstractmethod
-    def display_products(self, products: List[ProductDisplayDTO], has_products):
+    def display_products(self, products: tuple[ProductDisplayDTO], has_products):
         pass
