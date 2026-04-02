@@ -63,7 +63,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
         warehouse_layout = QHBoxLayout()
         warehouse_layout.addWidget(QLabel("Склад:"))
         self.warehouse_combo = QComboBox()
-        self.warehouse_combo.addItem("Все", "")
+        self.warehouse_combo.addItem("Все", None)
         warehouse_layout.addWidget(self.warehouse_combo)
         warehouse_layout.addStretch()
         filters_layout.addLayout(warehouse_layout)
@@ -180,7 +180,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
     def set_warehouses(self, warehouses: list[ObjectDisplayDTO]):
         """Заполняет список складов"""
         self.warehouse_combo.clear()
-        self.warehouse_combo.addItem("Все", "")
+        self.warehouse_combo.addItem("Все", None)
         for wh in warehouses:
             self.warehouse_combo.addItem(f"{wh.object_name}", wh.object_id)
 

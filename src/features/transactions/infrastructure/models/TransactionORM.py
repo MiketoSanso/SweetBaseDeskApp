@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Boolean, Column, DateTime, Float, Index, Integer, String
+from sqlalchemy import JSON, Boolean, Column, DateTime, Index, Integer, String
 
 from src.shared.infrastructure.Base import Base
 
@@ -12,7 +12,7 @@ class TransactionORM(Base):
     branch_id = Column(Integer, nullable=False)
     warehouse_id = Column(Integer, nullable=False)
     items = Column(JSON, default=list)
-    total_amount = Column(Float)
+    total_amount = Column(Integer)
     timestamp = Column(DateTime, nullable=False)
     user_note = Column(String, nullable=False)
 

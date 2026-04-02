@@ -10,7 +10,7 @@ class GetWarehousesUseCase:
 
     @usecase_func
     def execute(self, id: int) -> ProcessDTO:
-        if id < 1:
+        if not id or id < 1:
             return ProcessDTO(
                 status=False, message="id некорректный!!", error="Id incorrec!"
             )
@@ -26,10 +26,10 @@ class GetWarehousesUseCase:
 
         warehouses_dto: list[ObjectDisplayDTO] = []
         for warehouse in warehouses:
-            warehouse = ObjectDisplayDTO(
+            warehouse_dto = ObjectDisplayDTO(
                 object_id=warehouse, object_name=f"Склад_{warehouse}"
             )
-            warehouses_dto.append(warehouse)
+            warehouses_dto.append(warehouse_dto)
 
         return ProcessDTO(
             status=True, message="Данные сформированы успешно!", data=warehouses_dto

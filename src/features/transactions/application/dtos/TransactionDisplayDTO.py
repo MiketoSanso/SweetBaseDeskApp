@@ -1,5 +1,4 @@
 from datetime import datetime
- 
 
 from pydantic import BaseModel, ConfigDict
 
@@ -13,7 +12,7 @@ class TransactionDisplayDTO(BaseModel):
     branch_id: int
     warehouse_id: int
     items: list[TransactionItem]
-    total_amount: float
+    total_amount: int
     timestamp: datetime
     user_note: str
 
