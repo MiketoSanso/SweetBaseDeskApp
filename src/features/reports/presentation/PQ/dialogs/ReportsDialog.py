@@ -1,5 +1,3 @@
- 
-
 from PySide6.QtCore import QDate
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
@@ -45,7 +43,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
         type_layout = QHBoxLayout()
         type_layout.addWidget(QLabel("Тип операции:"))
         self.type_combo = QComboBox()
-        self.type_combo.addItem("Все", "")
+        self.type_combo.addItem("Все", None)
         self.type_combo.addItem("Приход", True)
         self.type_combo.addItem("Уход", False)
         type_layout.addWidget(self.type_combo)
@@ -56,7 +54,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
         branch_layout = QHBoxLayout()
         branch_layout.addWidget(QLabel("Филиал:"))
         self.branch_combo = QComboBox()
-        self.branch_combo.addItem("Все", "")
+        self.branch_combo.addItem("Все", None)
         branch_layout.addWidget(self.branch_combo)
         branch_layout.addStretch()
         filters_layout.addLayout(branch_layout)
@@ -134,7 +132,8 @@ class ReportsDialog(IReportsDialog, IABCDialog):
     def _collect_filters(self):
         """Собирает текущие значения фильтров"""
         filters = {}
-        filters["type"] = self.type_combo.currentData() or True
+
+        filters["is_arrival"] = self.type_combo.currentData()
         filters["branch_id"] = self.branch_combo.currentData() or 0
         filters["warehouse_id"] = self.warehouse_combo.currentData() or 0
 
@@ -173,7 +172,7 @@ class ReportsDialog(IReportsDialog, IABCDialog):
     def set_branches(self, branches: list[Branch], has_branches):
         """Заполняет список филиалов"""
         self.branch_combo.clear()
-        self.branch_combo.addItem("Все", "")
+        self.branch_combo.addItem("Все", None)
         if has_branches:
             for branch in branches:
                 self.branch_combo.addItem(branch.name, branch.local_id)

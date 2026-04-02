@@ -41,7 +41,7 @@ class GetTransactionsByFiltersUseCase:
                 ReportTransactionDTO(
                     type=type,
                     branch_name=branch.name,
-                    warehouse_name=f"Склад_{transaction.branch_id}",
+                    warehouse_name=f"Склад_{transaction.warehouse_id}",
                     items_text=text_item,
                     total_amount=transaction.total_amount,
                     timestamp=transaction.timestamp,

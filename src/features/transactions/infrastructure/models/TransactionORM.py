@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Boolean, Column, Float, Integer, String, DateTime
+from sqlalchemy import JSON, Boolean, Column, DateTime, Float, Index, Integer, String
 
 from src.shared.infrastructure.Base import Base
 
@@ -17,3 +17,10 @@ class TransactionORM(Base):
     user_note = Column(String, nullable=False)
 
     __mapper_args__ = {"primary_key": [local_id]}
+
+    __table_args__ = (
+        Index(
+            "ix_transactions_branch_timestamp", "branch_id", "timestamp"
+        ),  # для отчётов
+        Index("ix_transactions_timestamp", "timestamp"),  # для сортировки
+    )

@@ -1,5 +1,3 @@
- 
-
 from pydantic import BaseModel
 
 from src.features.products.domain.value_objects.ProductIngredientVO import (

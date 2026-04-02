@@ -1,5 +1,3 @@
- 
-
 from src.features.reports.application.dtos.TransactionFiltersDTO import (
     TransactionFiltersDTO,
 )
@@ -66,7 +64,7 @@ class TransactionsRepository(ITransactionsRepository):
         query = session.query(TransactionORM)
 
         if filters:
-            if filters.is_arrival:
+            if filters.is_arrival is not None:
                 query = query.filter(TransactionORM.is_arrival == filters.is_arrival)
             if filters.branch_id != 0:
                 query = query.filter(TransactionORM.branch_id == filters.branch_id)

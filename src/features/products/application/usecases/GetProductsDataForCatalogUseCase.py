@@ -28,29 +28,23 @@ class GetProductsDataForCatalogUseCase:
 
         product_ids = [product.local_id for product in products]
 
-        stock_item_counts: dict[int, int] = self.db_stock_items.get_all_count_stocks(tuple(product_ids))
+        stock_item_counts: dict[int, int] = self.db_stock_items.get_all_count_stocks(
+            tuple(product_ids)
+        )
 
         display_products: list[ProductDisplayDTO] = []
 
-        if stock_item_counts:
-            for product in products:
-                display_products.append(ProductDisplayDTO(
+        for product in products:
+            display_products.append(
+                ProductDisplayDTO(
                     id=product.local_id,
                     name=product.name,
                     stock_count=stock_item_counts.get(product.local_id, 0),
-                ))
-
-        else:
-            for product in products:
-                display_products.append(ProductDisplayDTO(
-                    id=product.local_id,
-                    name=product.name,
-                    stock_count=0,
-                ))
+                )
+            )
 
         return ProcessDTO(
             status=True,
             message="Данные получены успешно!",
-            data=tuple(display_products)
+            data=tuple(display_products),
         )
-

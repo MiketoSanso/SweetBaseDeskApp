@@ -13,7 +13,9 @@ class IStockItemsRepository(ABC):
         pass
 
     @abstractmethod
-    def get_all_count_stocks(self, id_stock_items: tuple[int, ...], session=None) -> dict[int, int]:
+    def get_all_count_stocks(
+        self, id_stock_items: tuple[int, ...], session=None
+    ) -> dict[int, int]:
         pass
 
     @abstractmethod
@@ -23,7 +25,7 @@ class IStockItemsRepository(ABC):
         pass
 
     @abstractmethod
-    def get_stock_items(self, branch_id: int) -> tuple[StockItem] | None:
+    def get_stock_items(self, product_id: int) -> tuple[StockItem] | None:
         pass
 
     @abstractmethod

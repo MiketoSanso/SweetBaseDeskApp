@@ -49,7 +49,7 @@ class ReportsDialogPresenter:
 
     def on_filters_changed(self, data: dict):
         transaction_filters_dto = TransactionFiltersDTO(
-            is_arrival=data["type"],
+            is_arrival=data["is_arrival"],
             branch_id=data["branch_id"],
             warehouse_id=data["warehouse_id"],
             date_from=data["date_from"],

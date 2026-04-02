@@ -1,5 +1,3 @@
- 
-
 from src.shared.application.dtos.ObjectDisplayDTO import ObjectDisplayDTO
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
@@ -12,6 +10,11 @@ class GetWarehousesUseCase:
 
     @usecase_func
     def execute(self, id: int) -> ProcessDTO:
+        if id < 1:
+            return ProcessDTO(
+                status=False, message="id некорректный!!", error="Id incorrec!"
+            )
+
         branch = self.db.get_branch_by_id(id)
 
         if not branch:

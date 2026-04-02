@@ -1,5 +1,3 @@
- 
-
 from src.features.products.application.dtos.StockItemDisplayDTO import (
     StockItemDisplayDTO,
 )
@@ -19,8 +17,8 @@ class GetStockItemsUsecase:
         self.branches_repo = branches_repo
 
     @usecase_func
-    def execute(self, id: int) -> ProcessDTO:
-        stock_items = self.stock_item_repo.get_stock_items(id)
+    def execute(self, product_id: int) -> ProcessDTO:
+        stock_items = self.stock_item_repo.get_stock_items(product_id)
 
         if not stock_items:
             return ProcessDTO(

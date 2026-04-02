@@ -1,5 +1,4 @@
 from sqlalchemy import func
-from sqlalchemy.engine import row
 
 from src.features.stock_info.domain.entities.StockItem import StockItem
 from src.features.stock_info.infrastructure.models.StockItemORM import StockItemORM
@@ -27,16 +26,20 @@ class StockItemsRepository(IStockItemsRepository):
         return count
 
     @repo_func
-    def get_all_count_stocks(self, id_stock_items: tuple[int, ...], session=None) -> dict[int, int]:
-        result = session.query(
-            StockItemORM.local_id,
-            func.sum(StockItemORM.quantity).label('total_quantity')
-        ).filter(StockItemORM.product_id.in_(id_stock_items)
-                 ).group_by(StockItemORM.product_id
-                            ).all()
+    def get_all_count_stocks(
+        self, id_stock_items: tuple[int, ...], session=None
+    ) -> dict[int, int]:
+        result = (
+            session.query(
+                StockItemORM.product_id,
+                func.sum(StockItemORM.quantity).label("total_quantity"),
+            )
+            .filter(StockItemORM.product_id.in_(id_stock_items))
+            .group_by(StockItemORM.product_id)
+            .all()
+        )
 
-
-        stock_counts = {row.local_id: row.total_quantity for row in result}
+        stock_counts = {row.product_id: row.total_quantity for row in result}
 
         return stock_counts
 
@@ -85,21 +88,18 @@ class StockItemsRepository(IStockItemsRepository):
         return items
 
     @repo_func
-    def get_stock_items(self, branch_id: int, session=None) -> tuple[StockItem] | None:
+    def get_stock_items(self, product_id: int, session=None) -> tuple[StockItem] | None:
         items_orm = (
             session.query(StockItemORM)
-            .filter(StockItemORM.branch_id == branch_id)
+            .filter(StockItemORM.product_id == product_id)
             .all()
         )
-
-        if not items_orm:
-            return None
 
         items = []
         for item in items_orm:
             items.append(StockItem.model_validate(item))
 
-        return items
+        return tuple(items)
 
     @repo_func
     def add_item_in_stock(self, stock_item: StockItem, session=None):

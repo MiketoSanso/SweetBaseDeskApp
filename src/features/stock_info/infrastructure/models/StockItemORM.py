@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, UniqueConstraint
+from sqlalchemy import Column, Index, Integer, UniqueConstraint
 
 from src.shared.infrastructure.Base import Base
 
@@ -19,5 +19,6 @@ class StockItemORM(Base):
         UniqueConstraint(
             "branch_id", "stock_id", "product_id", name="unique_stock_item"
         ),
-        # Index('ix_stock_lookup', 'branch_id', 'stock_id', 'product_id'),
+        Index("ix_stock_lookup", "branch_id", "stock_id"),  # для get_items_in_stock
+        Index("ix_stock_items_product_id", "product_id"),  # для get_stock_items
     )

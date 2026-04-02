@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 
 class TransactionFiltersDTO(BaseModel):
-    is_arrival: bool
+    is_arrival: Optional[bool]
     branch_id: int
     warehouse_id: int
     date_from: Optional[datetime]

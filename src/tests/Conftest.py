@@ -16,8 +16,6 @@ from src.shared.infrastructure.Database import Database
 @pytest.fixture(scope="session")
 def qapp():
     app = QApplication(sys.argv)
-    if app is None:
-        app = QApplication(sys.argv)
     yield app
 
 
@@ -29,12 +27,8 @@ def temp_db():
     engine = create_engine(f"sqlite:///{temp_db_path}")
     Base.metadata.create_all(engine)
 
-    original_session = Database.session()
-    Database.session = sessionmaker(bind=engine)
-
     yield engine
 
-    Database.session = original_session
     os.unlink(temp_db_path)
 
 
@@ -45,10 +39,11 @@ def dependencies(temp_db):
 
     deps = Dependencies()
 
-    deps.db = Database
-    deps.db.session = sessionmaker(bind=temp_db)
+    deps.db = Database()
+    deps.db._engine = temp_db
+    deps.db._session_local = sessionmaker(bind=temp_db)
 
-    deps.initlialize_data()
+    deps.initialize_data()
     deps.initialize_usecases()
 
     if original_env:
@@ -56,7 +51,7 @@ def dependencies(temp_db):
 
 
 @pytest.fixture
-def main_window(qapp, dependencies):
+def main_window(qapp, dependencies: Dependencies):
     window = dependencies.main_window
     window.show()
     yield window

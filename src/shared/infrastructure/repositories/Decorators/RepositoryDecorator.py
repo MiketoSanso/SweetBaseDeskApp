@@ -7,7 +7,7 @@ T = TypeVar("T")
 def repo_func(func: Callable[..., T]) -> Callable[..., T]:
     @functools.wraps(func)
     def wrapper(self, *args, **kwargs):
-        session = self.db.session()
+        session = self.db.get_session()
         try:
             result = func(self, *args, **kwargs, session=session)
             session.commit()
