@@ -1,3 +1,5 @@
+from typing import Optional
+
 from src.features.reports.application.dtos.TransactionFiltersDTO import (
     TransactionFiltersDTO,
 )
@@ -32,12 +34,12 @@ class TransactionsRepository(ITransactionsRepository):
     def get_transactions_info(self, session=None) -> TransactionsInfoDTO:
         in_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival is True)
+            .filter(TransactionORM.is_arrival.is_(True))
             .count()
         )
         out_count = (
             session.query(TransactionORM)
-            .filter(TransactionORM.is_arrival is False)
+            .filter(TransactionORM.is_arrival.is_(False))
             .count()
         )
 
@@ -59,7 +61,7 @@ class TransactionsRepository(ITransactionsRepository):
 
     @repo_func
     def get_transactions(
-        self, filters: TransactionFiltersDTO = None, session=None
+        self, filters: Optional[TransactionFiltersDTO] = None, session=None
     ) -> list[Transaction]:
         query = session.query(TransactionORM)
 

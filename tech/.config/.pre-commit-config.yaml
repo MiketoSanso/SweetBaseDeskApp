@@ -9,8 +9,9 @@ repos:
           - --remove-unused-variables
           - --expand-star-imports
           - --recursive
-        exclude: ^(src/tests/|src/shared/infrastructure/repositories/Decorators/|src/shared/application/usecases/Decorators/)
+        exclude: ^(src/tests/|src/shared/infrastructure/repositories/Decorators/|src/shared/application/usecases/Decorators/|migrations/)
         files: ^src/
+
 
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2

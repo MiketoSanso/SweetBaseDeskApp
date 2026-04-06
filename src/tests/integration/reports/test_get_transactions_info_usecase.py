@@ -24,6 +24,5 @@ class TestGetTransactionsInfoUseCase:
 
         result = usecase.execute()
 
-        print(result.data.in_count)
         is_transactions_loaded = result.data.total_transactions > 0
         assert is_transactions_loaded == should_have_transactions
