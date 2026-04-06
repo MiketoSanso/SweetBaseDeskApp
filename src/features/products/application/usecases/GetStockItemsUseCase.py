@@ -9,7 +9,7 @@ from src.shared.application.Interfaces.IStockItemsRepository import (
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
 
 
-class GetStockItemsUsecase:
+class GetStockItemsUseCase:
     def __init__(
         self, stock_item_repo: IStockItemsRepository, branches_repo: IBranchesRepository
     ):

@@ -93,7 +93,9 @@ def create_transaction(dependencies: Dependencies, setup_initial_stock):
         setup_initial_stock(3)
         if items is None:
             items = [
-                TransactionItem(product_id=1, quantity=10, product_name="Test Product")
+                TransactionItem(
+                    product_id=1, quantity=10, product_name="Test Product 0"
+                )
             ]
         transaction = Transaction(
             is_arrival=is_arrival,

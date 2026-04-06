@@ -7,8 +7,8 @@ from src.features.products.application.dtos.IngredientDisplayDTO import (
 from src.features.products.application.interfaces.IProductDetailsDialog import (
     IProductDetailsDialog,
 )
-from src.features.products.application.usecases.GetStockItemsUsecase import (
-    GetStockItemsUsecase,
+from src.features.products.application.usecases.GetStockItemsUseCase import (
+    GetStockItemsUseCase,
 )
 from src.features.products.domain.entities.Product import Product
 from src.shared.application.Interfaces.IMessageService import IMessageService
@@ -20,7 +20,7 @@ class ProductDetailsDialogPresenter:
         view: IProductDetailsDialog,
         message_service: IMessageService,
         get_ingredient_by_id_usecase: GetIngredientByIDUseCase,
-        get_stock_items_usecase: GetStockItemsUsecase,
+        get_stock_items_usecase: GetStockItemsUseCase,
         product: Product,
     ):
         self.view = view

@@ -5,6 +5,7 @@ from src.features.transactions.application.dtos.TransactionDisplayDTO import (
 from src.features.transactions.domain.entities.Transaction import Transaction
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.Interfaces.IBranchesRepository import IBranchesRepository
+from src.shared.application.Interfaces.IProductsRepository import IProductsRepository
 from src.shared.application.Interfaces.IStockItemsRepository import (
     IStockItemsRepository,
 )
@@ -20,10 +21,12 @@ class AddTransactionUseCase:
         transactions_repo: ITransactionsRepository,
         stock_items_repo: IStockItemsRepository,
         branches_repo: IBranchesRepository,
+        products_repo: IProductsRepository,
     ):
         self.stock_items_repo = stock_items_repo
         self.transactions_repo = transactions_repo
         self.branches_repo = branches_repo
+        self.products_repo = products_repo
 
     @usecase_func
     def execute(self, dto: TransactionDisplayDTO) -> ProcessDTO:
@@ -93,16 +96,25 @@ class AddTransactionUseCase:
                 if branch:
                     warehouse = branch.warehouses[dto.warehouse_id]
 
-                if not warehouse or not branch:
-                    return ProcessDTO(
-                        status=False,
-                        message="Переданы некорректные ID объекта!",
-                        error="Branch/Warehouse/Product ID is incorrect!",
-                    )
+                product = self.products_repo.get_product_by_id(item.product_id)
 
                 stock_item = self.stock_items_repo.get_item_in_stock(
                     dto.branch_id, dto.warehouse_id, item.product_id
                 )
+
+                if not warehouse or not branch:
+                    return ProcessDTO(
+                        status=False,
+                        message="Переданы некорректные ID хранилища!",
+                        error="Branch/Warehouse ID is incorrect!",
+                    )
+
+                if not product:
+                    return ProcessDTO(
+                        status=False,
+                        message="Передан некорректный ID продукта!",
+                        error="Product ID is incorrect!",
+                    )
 
                 if not stock_item:
                     stock_item = StockItem(
