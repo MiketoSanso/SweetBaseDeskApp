@@ -41,6 +41,34 @@ class TestAddTransactionUseCase:
                 False,
                 1,
                 1,
+                [
+                    TransactionItem(
+                        product_id=1000, quantity=9, product_name="Продукт 0"
+                    )
+                ],
+                9,
+                datetime.now(),
+                "note",
+                False,
+            ),
+            (
+                True,
+                1,
+                1,
+                [
+                    TransactionItem(
+                        product_id=1000, quantity=9, product_name="Продукт 0"
+                    )
+                ],
+                9,
+                datetime.now(),
+                "note",
+                False,
+            ),
+            (
+                False,
+                1,
+                1,
                 [TransactionItem(product_id=1, quantity=10, product_name="Продукт 0")],
                 10,
                 datetime.now(),

@@ -14,8 +14,8 @@ from src.features.products.application.usecases.GetProductByIdUseCase import (
 from src.features.products.application.usecases.GetProductsDataForCatalogUseCase import (
     GetProductsDataForCatalogUseCase,
 )
-from src.features.products.application.usecases.GetStockItemsUsecase import (
-    GetStockItemsUsecase,
+from src.features.products.application.usecases.GetStockItemsUseCase import (
+    GetStockItemsUseCase,
 )
 from src.features.products.presentation.controllers.AddProductDialogPresenter import (
     AddProductDialogPresenter,
@@ -42,7 +42,7 @@ class ProductsTabPresenter:
         get_product_by_id_usecase: GetProductByIdUseCase,
         get_ingredients_usecase: GetIngredientsUseCase,
         get_ingredient_by_id_usecase: GetIngredientByIDUseCase,
-        get_stock_items_usecase: GetStockItemsUsecase,
+        get_stock_items_usecase: GetStockItemsUseCase,
     ):
         self.view = view
         self.message_service = message_service

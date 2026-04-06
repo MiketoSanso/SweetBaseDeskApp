@@ -1,3 +1,6 @@
+from src.features.reports.application.dtos.TransactionsInfoDTO import (
+    TransactionsInfoDTO,
+)
 from src.shared.application.dtos.ProcessDTO import ProcessDTO
 from src.shared.application.usecases.Decorators.BaseUseCaseDecorator import usecase_func
 from src.shared.infrastructure.repositories.TransactionsRepository import (
@@ -11,7 +14,9 @@ class GetTransactionsInfoUseCase:
 
     @usecase_func
     def execute(self) -> ProcessDTO:
-        transactions_info = self.transactions_repo.get_transactions_info()
+        transactions_info: TransactionsInfoDTO = (
+            self.transactions_repo.get_transactions_info()
+        )
 
         return ProcessDTO(
             status=True,

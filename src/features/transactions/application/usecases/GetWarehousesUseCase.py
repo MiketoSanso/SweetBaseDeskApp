@@ -9,13 +9,13 @@ class GetWarehousesUseCase:
         self.db = db
 
     @usecase_func
-    def execute(self, id: int) -> ProcessDTO:
-        if not id or id < 1:
+    def execute(self, branch_id: int) -> ProcessDTO:
+        if not branch_id or branch_id < 1:
             return ProcessDTO(
-                status=False, message="id некорректный!!", error="Id incorrec!"
+                status=False, message="id некорректный!!", error="Id incorrect!"
             )
 
-        branch = self.db.get_branch_by_id(id)
+        branch = self.db.get_branch_by_id(branch_id)
 
         if not branch:
             return ProcessDTO(

@@ -9,7 +9,7 @@ from src.features.products.application.usecases.AddProductUseCase import AddProd
 from src.features.products.application.usecases.GetProductByIdUseCase import GetProductByIdUseCase
 from src.features.products.application.usecases.GetProductsDataForCatalogUseCase import GetProductsDataForCatalogUseCase
 from src.features.products.application.usecases.GetProductsUseCase import GetProductsUseCase
-from src.features.products.application.usecases.GetStockItemsUsecase import GetStockItemsUsecase
+from src.features.products.application.usecases.GetStockItemsUseCase import GetStockItemsUseCase
 from src.features.reports.application.usecases.GetTransactionsByFiltersUseCase import GetTransactionsByFiltersUseCase
 from src.features.reports.application.usecases.GetTransactionsInfoUseCase import GetTransactionsInfoUseCase
 from src.features.reports.presentation.controllers.ReportsTabPresenter import ReportsTabPresenter
@@ -61,7 +61,7 @@ class Dependencies:
         self.get_product_by_id_usecase = GetProductByIdUseCase(self.products_repo)
         self.get_products_data_for_catalog_usecase = GetProductsDataForCatalogUseCase(self.products_repo, self.stock_items_repo)
         self.get_products_usecase = GetProductsUseCase(self.products_repo)
-        self.get_stock_items_usecase = GetStockItemsUsecase(self.stock_items_repo, self.branches_repo)
+        self.get_stock_items_usecase = GetStockItemsUseCase(self.stock_items_repo, self.branches_repo)
 
         self.add_ingredient_usecase = AddIngredientUseCase(self.ingredients_repo)
         self.get_ingredients_usecase = GetIngredientsUseCase(self.ingredients_repo)
@@ -83,7 +83,9 @@ class Dependencies:
 
         self.add_transaction_usecase = AddTransactionUseCase(
             self.transactions_repo,
-            self.stock_items_repo
+            self.stock_items_repo,
+            self.branches_repo,
+            self.products_repo
         )
         self.get_warehouses_usecase = GetWarehousesUseCase(self.branches_repo)
 
