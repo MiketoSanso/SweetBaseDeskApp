@@ -1,5 +1,3 @@
- 
-
 from src.features.branches.domain.entities.Branch import Branch
 from src.features.branches.infrastructure.models.BranchORM import BranchORM
 from src.shared.application.Interfaces.IBranchesRepository import IBranchesRepository

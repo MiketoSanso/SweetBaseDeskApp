@@ -29,10 +29,10 @@ class AddIngredientUseCase:
                 error="Ingredient unit is not correct!",
             )
 
-        if dto.unit_cost <= 0:
+        if dto.unit_cost <= 0 or dto.unit_cost >= 1000000000:
             return ProcessDTO(
                 status=False,
-                message="Цена не может быть меньше 0 или равна 0!",
+                message="Цена не может быть меньше 0, равна 0 или больше миллиарда!",
                 error="Ingredient cost is not correct!",
             )
 

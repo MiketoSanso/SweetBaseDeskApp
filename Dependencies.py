@@ -70,15 +70,21 @@ class Dependencies:
         self.get_data_ingredient_by_id_usecase = GetIngredientByIDUseCase(self.ingredients_repo)
 
         self.get_transactions_info_usecase = GetTransactionsInfoUseCase(self.transactions_repo)
-        self.get_transactions_by_filters_usecase = GetTransactionsByFiltersUseCase(self.transactions_repo, self.branches_repo)
+        self.get_transactions_by_filters_usecase = GetTransactionsByFiltersUseCase(
+            self.transactions_repo,
+            self.branches_repo
+        )
 
-        self.locad_stock_items_usecase = LoadStockItemsUseCase(
+        self.load_stock_items_usecase = LoadStockItemsUseCase(
             self.stock_items_repo,
             self.products_repo,
             self.ingredients_repo
         )
 
-        self.add_transaction_usecase = AddTransactionUseCase(self.transactions_repo, self.stock_items_repo)
+        self.add_transaction_usecase = AddTransactionUseCase(
+            self.transactions_repo,
+            self.stock_items_repo
+        )
         self.get_warehouses_usecase = GetWarehousesUseCase(self.branches_repo)
 
     def initialize_ui(self):
@@ -128,7 +134,7 @@ class Dependencies:
             self.message_service,
             self.get_branches_usecase,
             self.get_warehouses_usecase,
-            self.locad_stock_items_usecase
+            self.load_stock_items_usecase
         )
 
         self.reports_tab_presenter = ReportsTabPresenter(

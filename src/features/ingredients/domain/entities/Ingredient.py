@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class Ingredient(BaseModel):
@@ -10,5 +10,4 @@ class Ingredient(BaseModel):
     description: str | None = None
     count_usages: int = 0
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 from src.features.products.domain.value_objects.ProductIngredientVO import (
     ProductIngredientVO,
@@ -12,5 +12,4 @@ class Product(BaseModel):
     image_path: str | None = None
     ingredients: list[ProductIngredientVO]
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

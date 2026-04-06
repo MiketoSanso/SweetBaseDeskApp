@@ -11,7 +11,7 @@ class IngredientORM(Base):
     name = Column(String, nullable=False)
     unit_cost = Column(Float, nullable=False)
     unit = Column(String, nullable=False)
-    description = Column(String, nullable=False)
+    description = Column(String)
     count_usages = Column(Integer)
 
     __mapper_args__ = {"primary_key": [local_id]}

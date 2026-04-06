@@ -18,6 +18,13 @@ class AddBranchUseCase:
                 error="Branch name is not defined!",
             )
 
+        if not dto.warehouses:
+            return ProcessDTO(
+                status=False,
+                message="Склады не указаны!",
+                error="Warehouses is not defined!",
+            )
+
         branch = Branch.model_validate(dto)
 
         self.db.add_branch(branch)
