@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
- 
 
 from src.features.branches.domain.entities.Branch import Branch
 from src.shared.infrastructure.Database import Database

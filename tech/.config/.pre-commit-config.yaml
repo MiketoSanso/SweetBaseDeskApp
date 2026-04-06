@@ -40,7 +40,7 @@ repos:
     rev: v1.9.0
     hooks:
       - id: mypy
-        args: ["--ignore-missing-imports", "--follow-imports=silent"]
-        additional_dependencies: [pydantic, sqlalchemy, pyside6]
+        args: [ "--ignore-missing-imports", "--follow-imports=silent"]
+        additional_dependencies: [ pydantic, sqlalchemy, pyside6 ]
         files: ^src/
         exclude: ^(src/tests/|src/shared/infrastructure/repositories/Decorators/)

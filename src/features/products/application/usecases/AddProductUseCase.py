@@ -31,6 +31,14 @@ class AddProductUseCase:
                 error="Ingredients is not defined!",
             )
 
+        for ingredient in dto.ingredients:
+            if not self.db_ingredients.get_ingredient_by_id(ingredient.ingredient_id):
+                return ProcessDTO(
+                    status=False,
+                    message="Ингредиент не найден!",
+                    error="Ingredient is not found!",
+                )
+
         product = Product.model_validate(dto)
 
         for ingredient in product.ingredients:
